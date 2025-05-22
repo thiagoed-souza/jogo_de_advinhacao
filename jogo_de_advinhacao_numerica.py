@@ -11,6 +11,8 @@ else:
 
 random_number = random.randint(0, p_number)
 
+n_escolhas = 0
+
 while True:
     answer_user = input("Advinhe o número: ")
 
@@ -20,6 +22,7 @@ while True:
         print("Error: valor informado não é númerico. Por favor, execute e informe um número!")
         continue
 
+    n_escolhas = n_escolhas + 1
     if answer_user == random_number:
         print("Acertou!")
         break
@@ -27,3 +30,5 @@ while True:
         print("Chutou alto, o número randonico é menor que isso...")
     else:
         print("Chutou baixo, o número randonico é maior que isso...")
+    
+print("Nº de tentativas: " + str(n_escolhas))
